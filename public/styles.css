@@ -8,7 +8,7 @@ a {
 
 .content {
   text-align: center;
-  width: 700px;
+  width: 600px;
   margin: 60px, auto; }
   .content p {
     text-align: right;
@@ -20,7 +20,7 @@ a {
     .content p .green {
       font-weight: bold; }
 
-.green {
+span {
   color: green; }
   .green a {
     color: green; }
@@ -28,7 +28,9 @@ a {
     text-decoration: underline; }
 
 h1 {
-  font-size: 3.4em; }
+  font-size: 3.4em;
+  text-align: right;
+}
 
 ul {
   float: right;
@@ -36,39 +38,9 @@ ul {
 
 li {
   float: left;
-  list-style-tipe: none; }
-
-.header {
-  border-bottom: 3px solid grey;
-  float: left;
-  width: 100%; }
-  .header h1 {
-    float: left;
-    margin-bottom: 0.2em; }
-  .header ul {
-    margin-right: 5em; }
-  .header li {
-    display: inline;
-    margin-right: 0.2em; }
-
-.blog_content_wrap {
-  text-align: center;
-  background-color: #eee;
-  clear: both; }
-
-.blog_content {
-  text-align: left;
-  width: 700px;
-  margin: 0 auto;
-  background-color: white;
-  padding: 0.5em; }
-  .blog_content h2 {
-    margin-bottom: 0.1em;
-    margin-top: 0.1em; }
-
-.footer {
-  border-top: 3px solid grey;
-  padding: 0.5em; }
+  list-style-tipe: none;
+  padding-right: 8px;
+}
 
 a.homelink {
   color: grey; }
