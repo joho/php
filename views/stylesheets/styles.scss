@@ -1,6 +1,6 @@
 @import "compass/css3/box-shadow";
 
-$background_color: #fdfdfd;
+$background_color: darken(#fdfdfd, 5%);
 $text_color: #111111;
 $heading_green: #3BB304;
 $text_green: darken($heading_green, 10%);
@@ -125,7 +125,7 @@ li {
 .footer {
   font-family: Georgia;
 
-  $footer_background_color: lighten($text_color, 50%);
+  $footer_background_color: lighten($text_color, 40%);
   $footer_text_color: darken($background_color, 5%);
 
   @include box-shadow(0 3px 3px 0 darken($footer_background_color, 5%) inset);
