@@ -129,6 +129,11 @@ li {
 
   @include box-shadow(0 3px 3px 0 darken($footer_background_color, 5%) inset);
 
+  a {
+    color: lighten($text_green, 30%);
+    border-bottom: 1px dotted lighten($text_green, 30%);
+  }
+
   margin-top: 50px;
   clear: both;
   background-color: $footer_background_color;
