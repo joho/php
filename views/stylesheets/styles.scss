@@ -1,0 +1,126 @@
+@import "compass/css3/box-shadow";
+
+$background_color: #fdfdfd;
+$text_color: #111111;
+$green_highlight: #3BB304;
+
+$content_width: 800px;
+$image_width: 300px;
+
+$gutter_width: 20px;
+
+// css resets
+
+// border box all the things!
+* {
+  box-sizing: border-box;
+}
+
+/*
+	Margin, padding, and border resets
+	except for form elements
+*/
+
+body, div,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, th, td,
+article, aside, figure, footer, header, hgroup, menu, nav, section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/*
+	Consistency fixes
+	adopted from http://necolas.github.com/normalize.css/
+*/
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, nav, section, audio, canvas, video {
+	display: block;
+}
+// End Resets
+
+body {
+  background-color: $background_color;
+  color: $text_color;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.content {
+  width: 800px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.profile_image {
+  display: block;
+  float: left;
+}
+
+.bio {
+  float: left;
+  width: $content_width - $image_width - $gutter_width;
+  margin: 0 $gutter_width / 2;
+
+  min-height: $image_width;
+}
+
+.bio p {
+  margin: 0 1em 2em;
+  line-height: 1.6em;
+  font-size: 1.2em;
+}
+
+.subsection {
+  float: left;
+  width: $content_width / 3 - $gutter_width;
+  margin: 20px 28px 0 0;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+@mixin heading {
+  border-bottom: 1px solid lighten($text_color, 40%);
+  @include box-shadow(0 1px 3px -2px);
+}
+
+h1 {
+  text-align: right;
+  font-size: 3.4em;
+  margin-bottom: 30px;
+  @include heading;
+}
+
+h2 {
+  @include heading;
+  font-size: 1.9em;
+  margin-bottom: 10px;
+}
+
+.green {
+  color: $green_highlight;
+}
+
+a {
+  color: $green_highlight;
+  text-decoration: none;
+  border-bottom: 1px dotted $green_highlight;
+
+  &:visited {
+    $visited_link_color: darken($green_highlight, 10%);
+
+    color: $visited_link_color;
+    border-bottom: 1px dotted $visited_link_color;
+  }
+}
+
+li {
+  list-style-type: square;
+  margin-left: 17px;
+  line-height: 1.4em;
+  padding-bottom: 0.5em;
+}
