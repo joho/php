@@ -13,20 +13,27 @@
         I'm the <span>co-founder</span> of Melbourne based social film review startup <a href="http://goodfil.ms/">Goodfilms</a>. Over the past few years I've also been the <span>development manager</span> for all of the <a href="http://envato.com/">Envato</a> marketplaces, and a <span>developer</span> on a few other projects. Most notable of past coding jobs would be <a href="http://mycareer.com.au/">MyCareer</a>, and <a href="http://thevine.com.au/">The Vine</a>.
         </p>
         <p>
-          Outside of my work, I'm pretty serious about all the serious things in life: Bikes, Books, and Booze.  
+          Outside of my work, I'm pretty serious about all the serious things in life: <span class="green">Bikes, Books, and Booze</span>.  
         </p>
       </div>
 
-      <% %w(Writing Code).each do |sub_heading| %>
-        <div class="subsection">
-          <h2><%= sub_heading %></h2>
-          <ul>
-            <% (1..5).each do |num| %>
-              <li><a href="TODO"><%= "Some Project #{num}" %></a></li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
+      <div class="subsection">
+        <h2>Words</h2>
+        <ul>
+          <% @recent_writings.each do |title, url| %>
+            <li><a href="<%= url %>"><%= title %></a></li>
+          <% end %>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h2>Code</h2>
+        <ul>
+          <% @interesting_projects.each do |title, url| %>
+            <li><a href="<%= url %>"><%= title %></a></li>
+          <% end %>
+        </ul>
+      </div>
       
       <div class="subsection">
         <h2>Social Stuff</h2>
