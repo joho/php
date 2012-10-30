@@ -2,7 +2,7 @@
 
 $background_color: #fdfdfd;
 $text_color: #111111;
-$green_highlight: green;
+$green_highlight: #40C204;
 
 $content_width: 800px;
 $image_width: 300px;
@@ -30,7 +30,6 @@ article, aside, figure, footer, header, hgroup, menu, nav, section {
 	padding: 0;
 	border: 0;
 }
-
 
 /*
 	Consistency fixes
@@ -123,4 +122,5 @@ li {
   list-style-type: square;
   margin-left: 17px;
   line-height: 1.4em;
+  padding-bottom: 0.5em;
 }
