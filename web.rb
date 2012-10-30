@@ -17,5 +17,18 @@ get '/stylesheets/:name.css' do
 end
 
 get '/' do
+  @recent_writings = []
+  @recent_writings << ["Interview for The Fetch", "http://blog.thefetch.com/2012/10/29/interview-melbourne-local-john-barton/"]
+  @recent_writings << ["The Minimum Viable Rails Stack", "http://goodfil.ms/blog/posts/2012/09/15/minimum-viable-rails-stack/"]
+  @recent_writings << ["Scaling Rails @ Melbourne Ruby Meetup", "http://jrb.tumblr.com/post/30570014929/scaling-rails-at-melbourne-roro"]
+  @recent_writings << ["Netflix \"smothers\" 3rd party apps", "http://goodfil.ms/blog/posts/2012/06/18/netflix-quietly-smothers-3rd-party-app-ecosystem/"]
+  @recent_writings << ["Goodbye Cruel World", "http://notes.envato.com/developers/goodbye-cruel-world/"]
+
+  @interesting_projects = []
+  @interesting_projects << ["This site (Sinatra + SCSS)", "https://github.com/joho/whoisjohnbarton.com"]
+  @interesting_projects << ["Spoilerless Tour De France", "https://github.com/joho/letour"]
+  @interesting_projects << ["Loose (and fast) Postgres Row Counts", "https://github.com/goodfilms/postgres_loose_table_counts"]
+  @interesting_projects << ["Netflix API wrapper for Ruby", "https://github.com/goodfilms/netflix-ruby"]
+  @interesting_projects << ["HTTP Status codes 7xx (Developer Fouls)", "https://github.com/joho/7XX-rfc"]
   erb :index
 end
