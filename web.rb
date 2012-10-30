@@ -20,9 +20,8 @@ get '/' do
   @recent_writings = []
   @recent_writings << ["Interview for The Fetch", "http://blog.thefetch.com/2012/10/29/interview-melbourne-local-john-barton/"]
   @recent_writings << ["The Minimum Viable Rails Stack", "http://goodfil.ms/blog/posts/2012/09/15/minimum-viable-rails-stack/"]
+  @recent_writings << ["Will App.net be the connective tissue founders & developers can rely on?", "http://thenextweb.com/apps/2012/08/18/why-10000-people-care-app-net/"]
   @recent_writings << ["Scaling Rails @ Melbourne Ruby Meetup", "http://jrb.tumblr.com/post/30570014929/scaling-rails-at-melbourne-roro"]
-  @recent_writings << ["Netflix \"smothers\" 3rd party apps", "http://goodfil.ms/blog/posts/2012/06/18/netflix-quietly-smothers-3rd-party-app-ecosystem/"]
-  @recent_writings << ["Goodbye Cruel World", "http://notes.envato.com/developers/goodbye-cruel-world/"]
 
   @interesting_projects = []
   @interesting_projects << ["This site (Sinatra + SCSS)", "https://github.com/joho/whoisjohnbarton.com"]
