@@ -20,8 +20,8 @@
       <div class="subsection">
         <h2>Words</h2>
         <ul>
-          <% @recent_writings.each do |title, url| %>
-            <li><a href="<%= url %>"><%= title %></a></li>
+          <% @recent_writings.each do |link| %>
+            <li><a href="<%= link.url %>"><%= link.title %></a></li>
           <% end %>
         </ul>
       </div>
@@ -29,8 +29,8 @@
       <div class="subsection">
         <h2>Code</h2>
         <ul>
-          <% @interesting_projects.each do |title, url| %>
-            <li><a href="<%= url %>"><%= title %></a></li>
+          <% @interesting_projects.each do |link| %>
+            <li><a href="<%= link.url %>"><%= link.title %></a></li>
           <% end %>
         </ul>
       </div>
@@ -38,36 +38,9 @@
       <div class="subsection">
         <h2>Social Stuff</h2>
         <ul>
-          <li>
-            <a href="http://twitter.com/johnbarton" title="My Twitter">
-              twitter.com/johnbarton
-            </a>
-          </li>
-          <li>
-            <a href="http://goodfil.ms" title="My Movie Reviews">
-              goodfil.ms/john
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/joho" title="My GitHub">
-              github.com/joho
-            </a>
-          </li>
-          <li>
-            <a href="http://jrb.tumblr.com" title="My Tumblr">
-              jrb.tumblr.com
-            </a>
-          </li>
-          <li>
-            <a href="http://www.flickr.com/photos/johotravels" title="My Photos">
-              flickr.com/photos/johotravels
-            </a>
-          </li>
-          <li>
-            <a href="http://au.linkedin.com/in/johnbarton" title="My Photos">
-              au.linkedin.com/in/johnbarton
-            </a>
-          </li>
+          <% @social_networks.each do |link| %>
+            <li><a href="<%= link.url %>"><%= link.title %></a></li>
+          <% end %>
         </ul>
       </div>
 
