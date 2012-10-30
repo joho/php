@@ -24,7 +24,7 @@ class ExternalLink < Struct.new(:title, :url)
       new("goodfil.ms/john", "http://goodfil.ms/john"),
       new("github.com/joho", "http://github.com/joho"),
       new("jrb.tumblr.com", "http://jrb.tumblr.com"),
-      new("flickr.com/photos/johotravels", "http://www.flickr.com/photos/johotravels"),
+      new("goodreads.com/johnbarton", "http://goodreads.com/johnbarton"),
       new("au.linkedin.com/in/johnbarton", "http://au.linkedin.com/in/johnbarton")
     ]
   end
