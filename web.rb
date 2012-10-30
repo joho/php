@@ -1,4 +1,6 @@
 require 'sinatra'
+require 'sinatra/reloader' if development?
+
 require 'compass'
 require 'sass'
 

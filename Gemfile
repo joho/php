@@ -1,12 +1,13 @@
 source :rubygems
 
-gem 'sinatra', '1.3.0'
-gem 'thin', '1.2.7'
+gem 'sinatra'
+gem 'sinatra-contrib'
+gem 'thin'
 gem 'compass'
 gem 'sass'
 
 group :development do
-  gem 'heroku', '2.19.2'
-  gem 'foreman', '0.38.0'
+  gem 'heroku'
+  gem 'foreman'
 end
 
