@@ -2,7 +2,8 @@
 
 $background_color: #fdfdfd;
 $text_color: #111111;
-$green_highlight: #3BB304;
+$heading_green: #3BB304;
+$text_green: darken($heading_green, 10%);
 
 $content_width: 800px;
 $image_width: 300px;
@@ -52,6 +53,7 @@ body {
   width: 800px;
   margin: 0 auto;
   padding-top: 30px;
+  overflow: hidden;
 }
 
 .profile_image {
@@ -83,39 +85,32 @@ body {
   }
 }
 
-@mixin heading {
-  border-bottom: 1px solid lighten($text_color, 40%);
-  @include box-shadow(0 1px 3px -2px);
+.green {
+  color: $text_green;
 }
 
 h1 {
   text-align: right;
   font-size: 3.4em;
   margin-bottom: 30px;
-  @include heading;
+  border-bottom: 1px solid lighten($text_color, 40%);
+  @include box-shadow(0 1px 3px -2px);
+
+  .green {
+    color: $heading_green;
+  }
 }
 
 h2 {
-  @include heading;
   font-size: 1.9em;
   margin-bottom: 10px;
-}
-
-.green {
-  color: $green_highlight;
+  color: lighten($text_color, 30%);
 }
 
 a {
-  color: $green_highlight;
+  color: $text_green;
   text-decoration: none;
-  border-bottom: 1px dotted $green_highlight;
-
-  &:visited {
-    $visited_link_color: darken($green_highlight, 10%);
-
-    color: $visited_link_color;
-    border-bottom: 1px dotted $visited_link_color;
-  }
+  border-bottom: 1px dotted $text_green;
 }
 
 li {
@@ -123,4 +118,41 @@ li {
   margin-left: 17px;
   line-height: 1.4em;
   padding-bottom: 0.5em;
+  font-size: 0.9em;
+}
+
+.footer {
+  font-family: Georgia;
+
+  $footer_background_color: lighten($text_color, 50%);
+  $footer_text_color: darken($background_color, 5%);
+
+  margin-top: 50px;
+  clear: both;
+  background-color: $footer_background_color;
+  color: $footer_text_color;
+  text-align: center;
+
+  .quote-source {
+    display: inline-block;
+    float: right;
+    margin: 0.2em 1.5em 2em;
+    &::before {
+      content: "\2014";
+      margin-right: 0.5em;
+    }
+  }
+
+  blockquote {
+    margin: 1em 2em 0 1em;
+    font-size: 2em;
+
+    &::before {
+      content: open-quote;
+      font-size: 2.5em;
+      line-height: 0.1em;
+      vertical-align: -0.3em;
+      margin-right: 0.15em;
+    }
+  }
 }
