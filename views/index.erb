@@ -5,14 +5,30 @@
     <link href="/stylesheets/styles.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div class="content">
+    <h1>whois<span class="green">johnbarton</span>.com</h1>
+    <img src="/side-shot-square.jpg" width="300px" height="300px" />
+    <div>
       <p>
       I'm the <span>co-founder</span> of Melbourne based social film review startup <a href="http://goodfil.ms/">Goodfilms</a>. Over the past few years I've also been the <span>development manager</span> for all of the <a href="http://envato.com/">Envato</a> marketplaces, and a <span>developer</span> on a few other projects. Most notable of past coding jobs would be <a href="http://mycareer.com.au/">MyCareer</a>, and <a href="http://thevine.com.au/">The Vine</a>.
       </p>
       <p>
-        Outside of my work, I'm pretty serious about all the serious things in life: Bikes, Books, and Booze.
+        Outside of my work, I'm pretty serious about all the serious things in life: Bikes, Books, and Booze.  
       </p>
-      <h1>whois<span class="green">johnbarton</span>.com</h1>
+    </div>
+
+    <% %w(Writing Code).each do |sub_heading| %>
+      <div>
+        <h2><%= sub_heading %></h2>
+        <ul>
+          <% (1..5).each do |num| %>
+            <li><a href="TODO"><%= "Some Project #{num}" %></a></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    
+    <div>
+      <h2>Social Stuff</h2>
       <ul>
         <li>
           <a href="http://twitter.com/johnbarton" title="My Twitter">

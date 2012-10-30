@@ -17,5 +17,5 @@ get '/stylesheets/:name.css' do
 end
 
 get '/' do
-  File.read(File.join('public', 'index.html'))
+  erb :index
 end
