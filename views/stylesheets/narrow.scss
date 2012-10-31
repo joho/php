@@ -1,52 +1,39 @@
 @import "compass/css3/box-shadow";
 
+body {
+  padding: 10px 20px 20px 20px;
+}
+
 .body {
   min-height: 100%
 }
 
-.content {
-  margin: 0 auto;
-  width: 80%;
-  min-width: 27em;
-}
-
 h1 {
-  font-size: 2.6em;
+  font-size: 21px;
+  margin-bottom: 20px;
 }
 
 .profile_image {
-  width: 300px;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   margin-bottom: 1em;
   padding-bottom: 0.5em;
-
-  border-bottom: 1px solid lighten(#111111, 50%);
-  @include box-shadow(0 2px 3px -2px lighten(#111111, 50%));
 }
 
 .bio {
-  border-bottom: 1px solid lighten(#111111, 50%);
-  @include box-shadow(0 2px 3px -2px lighten(#111111, 50%));
+  margin-bottom: 50px;
+  padding: 10px;
 }
 
 .subsection {
-  border-bottom: 1px solid lighten(#111111, 50%);
-  @include box-shadow(0 2px 3px -2px lighten(#111111, 50%));
-
-  margin: 1em 0;
-  padding: 0 1em 1em;
-
-  &:last-of-type {
-    border-bottom: 0;
-    @include box-shadow(none);
-  }
+  margin: 30px 0;
+  padding: 0 10px;
 }
 
 .footer {
-  padding-top: 1em;
-
-  .content {
-    overflow: hidden;
-  }
+  margin-left: -20px; margin-right: -20px; margin-bottom: -20px; overflow: hidden;
+  font-weight: 600;
+  blockquote { font-size: 18px; line-height: 1.4; margin: 20px 20px 0 20px; }
+  .quote-source { font-size: 14px; }
 }
