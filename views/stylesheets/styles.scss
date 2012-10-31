@@ -44,13 +44,18 @@ footer, header, hgroup, nav, section, audio, canvas, video {
 body {
   background-color: $background_color;
   color: $text_color;
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+  font: 16px/1.4 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .bio p {
-  margin: 0 1em 2em;
-  line-height: 1.6em;
-  font-size: 1.2em;
+  margin-left: 20px;
+  font-size: 18px;
+  &:first-child {
+    font-size: 21px;
+    a { font-weight: 600; }
+  }
+  strong { font-weight: 600; }
+  & + p { margin-top: 20px; }
 }
 
 .green {
@@ -67,6 +72,10 @@ h1 {
   .green {
     color: $heading_green;
   }
+}
+
+.subsection.words {
+  clear: left;
 }
 
 h2 {
