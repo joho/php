@@ -6,6 +6,7 @@ require 'sass'
 
 $: << File.dirname(__FILE__) + "/lib"
 require 'external_link'
+require 'quote'
 
 # Asset settings
 set :public_folder, Proc.new { File.join(root, "public") }
@@ -23,6 +24,8 @@ get '/' do
   @recent_writings = ExternalLink.recent_writings
   @interesting_projects = ExternalLink.interesting_projects
   @social_networks = ExternalLink.social_networks
+
+  @quote = Quote.random
 
   erb :index
 end

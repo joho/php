@@ -61,8 +61,16 @@
 
     <div class="footer">
       <div class="content">
-        <blockquote>There is nothing to writing. All you do is sit down at a typewriter and bleed.</blockquote>
-        <span class="quote-source">Ernest Hemingway</span>
+        <blockquote>
+          <%= @quote.text %>
+        </blockquote>
+        <span class="quote-source">
+          <% if @quote.link %>
+            <a href="<%= @quote.link %>"><%= @quote.author %></a>
+          <% else %>
+            <%= @quote.author %>
+          <% end %>
+        </span>
       </div>
     </div>
 
