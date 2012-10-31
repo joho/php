@@ -48,7 +48,6 @@ body {
 }
 
 .profile_image {
-  width: 30%;
   img { width: 100%; }
 }
 
@@ -68,15 +67,19 @@ body {
 }
 
 h1 {
-  text-align: right;
-  font-size: 4em;
-  margin-bottom: 0.3em;
-  border-bottom: 1px solid lighten($text_color, 50%);
-  @include box-shadow(0 2px 3px -2px lighten($text_color, 50%));
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 300;
+  padding-bottom: 25px;
+  margin-bottom: 30px;
+  line-height: 1;
+  border-bottom: 1px solid lighten($text_color, 60%);
 
-  .green {
-    color: $heading_green;
-  }
+  .who { font-weight: 300; }
+  .is { font-weight: 400; }
+  .john-barton { color: $heading_green; font-weight: 600; margin-left: 3px; }
+  .dot-com { font-weight: 800; }
 }
 
 .subsection.words {

@@ -1,5 +1,5 @@
 $content_width: 800px;
-$image_width: 300px;
+$image_width: 245px;
 
 $gutter_width: 20px;
 
@@ -13,6 +13,7 @@ $gutter_width: 20px;
 .profile_image {
   display: block;
   float: left;
+  width: $image_width;
 }
 
 .bio {
