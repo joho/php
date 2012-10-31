@@ -45,8 +45,7 @@ footer, header, hgroup, nav, section, audio, canvas, video {
 body {
   background-color: $background_color;
   color: $text_color;
-<<<<<<< HEAD
-  font: 16px/1.4 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+  font: 18px/1.4 "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .profile_image {
@@ -56,7 +55,7 @@ body {
 
 .bio p {
   &:first-child {
-    font-size: 20px;
+    font-size: 21px;
     a { font-weight: 600; }
   }
   strong { font-weight: 600; }
@@ -94,6 +93,7 @@ h2 {
   font-weight: 600;
   margin-bottom: 12px;
   border-bottom: 1px solid $border_color;
+  @include box-shadow(0 2px 3px -2px $border_color);
   color: lighten($text_color, 40%);
 }
 
@@ -108,7 +108,7 @@ li {
   margin-left: 17px;
   line-height: 1.4em;
   padding-bottom: 0.5em;
-  font-size: 0.9em;
+  font-size: 0.8em;
   color: lighten($text_color, 30%);
 }
 
@@ -139,7 +139,8 @@ li {
   }
 
   blockquote {
-    font-size: 36px;
+    font-family: Georgia;
+    font-size: 38px;
     line-height: 1.2;
 
     &::before {
