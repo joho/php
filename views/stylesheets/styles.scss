@@ -5,10 +5,8 @@ $text_color: #111111;
 $heading_green: #3BB304;
 $text_green: darken($heading_green, 10%);
 
-$content_width: 800px;
-$image_width: 300px;
-
-$gutter_width: 20px;
+$footer_background_color: lighten($text_color, 40%);
+$footer_text_color: darken($background_color, 5%);
 
 // css resets
 
@@ -49,40 +47,10 @@ body {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
-.content {
-  width: 800px;
-  margin: 0 auto;
-  padding-top: 30px;
-  overflow: hidden;
-}
-
-.profile_image {
-  display: block;
-  float: left;
-}
-
-.bio {
-  float: left;
-  width: $content_width - $image_width - $gutter_width;
-  margin: 0 $gutter_width / 2;
-
-  min-height: $image_width;
-}
-
 .bio p {
   margin: 0 1em 2em;
   line-height: 1.6em;
   font-size: 1.2em;
-}
-
-.subsection {
-  float: left;
-  width: $content_width / 3 - $gutter_width;
-  margin: 2em 28px 0 0;
-
-  &:last-of-type {
-    margin-right: 0;
-  }
 }
 
 .green {
@@ -125,8 +93,6 @@ li {
 .footer {
   font-family: Georgia;
 
-  $footer_background_color: lighten($text_color, 40%);
-  $footer_text_color: darken($background_color, 5%);
 
   @include box-shadow(0 3px 3px 0 darken($footer_background_color, 5%) inset);
 

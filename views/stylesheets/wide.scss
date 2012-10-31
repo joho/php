@@ -1,0 +1,34 @@
+$content_width: 800px;
+$image_width: 300px;
+
+$gutter_width: 20px;
+
+.content {
+  width: 800px;
+  margin: 0 auto;
+  padding-top: 30px;
+  overflow: hidden;
+}
+
+.profile_image {
+  display: block;
+  float: left;
+}
+
+.bio {
+  float: left;
+  width: $content_width - $image_width - $gutter_width;
+  margin: 0 $gutter_width / 2;
+
+  min-height: $image_width;
+}
+
+.subsection {
+  float: left;
+  width: $content_width / 3 - $gutter_width;
+  margin: 2em 28px 0 0;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}

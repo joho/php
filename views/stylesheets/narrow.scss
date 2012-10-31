@@ -1,0 +1,50 @@
+@import "compass/css3/box-shadow";
+
+.body {
+  min-height: 100%
+}
+
+.content {
+  margin: 0 auto;
+  width: 80%;
+  min-width: 27em;
+}
+
+h1 {
+  font-size: 2.6em;
+}
+
+.profile_image {
+  text-align: center;
+  margin-bottom: 1em;
+  padding-bottom: 0.5em;
+
+  border-bottom: 1px solid lighten(#111111, 50%);
+  @include box-shadow(0 2px 3px -2px lighten(#111111, 50%));
+}
+
+.bio {
+  border-bottom: 1px solid lighten(#111111, 50%);
+  @include box-shadow(0 2px 3px -2px lighten(#111111, 50%));
+}
+
+.subsection {
+  border-bottom: 1px solid lighten(#111111, 50%);
+  @include box-shadow(0 2px 3px -2px lighten(#111111, 50%));
+
+  margin: 1em 0;
+  padding-bottom: 1em;
+
+  &:last-of-type {
+    border-bottom: 0;
+    @include box-shadow(none);
+  }
+}
+
+.footer {
+  padding-top: 1em;
+
+  .content {
+    overflow: hidden;
+  }
+}
