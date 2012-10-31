@@ -45,11 +45,13 @@ footer, header, hgroup, nav, section, audio, canvas, video {
 body {
   background-color: $background_color;
   color: $text_color;
+<<<<<<< HEAD
   font: 16px/1.4 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .profile_image {
   img { width: 100%;  }
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .bio p {
