@@ -33,7 +33,7 @@ h1 {
   @include box-shadow(0 2px 3px -2px lighten(#111111, 50%));
 
   margin: 1em 0;
-  padding-bottom: 1em;
+  padding: 0 1em 1em;
 
   &:last-of-type {
     border-bottom: 0;
