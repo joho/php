@@ -1,6 +1,7 @@
 class ExternalLink < Struct.new(:title, :url)
   def self.recent_writings
     [
+      new("Virtualization vs. The Cloud", "http://thenextweb.com/insider/2012/10/31/virtualization-vs-cloud/"),
       new("Interview for The Fetch", "http://blog.thefetch.com/2012/10/29/interview-melbourne-local-john-barton/"),
       new("The Minimum Viable Rails Stack", "http://goodfil.ms/blog/posts/2012/09/15/minimum-viable-rails-stack/"),
       new("Will App.net be the connective tissue founders & developers can rely on?", "http://thenextweb.com/apps/2012/08/18/why-10000-people-care-app-net/"),
