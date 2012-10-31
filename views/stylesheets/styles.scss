@@ -47,11 +47,16 @@ body {
   font: 16px/1.4 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
 }
 
+.profile_image {
+  width: 30%;
+  img { width: 100%; }
+}
+
 .bio p {
   margin-left: 20px;
-  font-size: 18px;
+  font-size: 16px;
   &:first-child {
-    font-size: 21px;
+    font-size: 20px;
     a { font-weight: 600; }
   }
   strong { font-weight: 600; }

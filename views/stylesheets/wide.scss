@@ -19,8 +19,6 @@ $gutter_width: 20px;
   float: left;
   width: $content_width - $image_width - $gutter_width;
   margin: 0 $gutter_width / 2;
-
-  min-height: $image_width;
 }
 
 .subsection {
