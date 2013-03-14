@@ -1,6 +1,6 @@
 @import "compass/css3/box-shadow";
 
-body {
+.container {
   padding: 10px 20px 20px 20px;
 }
 
@@ -32,7 +32,7 @@ h1 {
 }
 
 .footer {
-  margin-left: -20px; margin-right: -20px; margin-bottom: -20px; overflow: hidden;
+  overflow: hidden;
   font-weight: 600;
   blockquote { font-size: 18px; line-height: 1.4; margin: 20px 20px 0 20px; }
   .quote-source { font-size: 14px; }

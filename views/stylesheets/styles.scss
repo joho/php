@@ -43,9 +43,14 @@ footer, header, hgroup, nav, section, audio, canvas, video {
 // End Resets
 
 body {
-  background-color: $background_color;
+  background-color: $footer_background_color;
   color: $text_color;
   font: 18px/1.4 "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.container {
+  background-color: $background_color;
+  padding-bottom: 50px
 }
 
 .profile_image {
@@ -123,7 +128,6 @@ li {
 
   font-weight: 300;
   color: #bbb;
-  margin-top: 50px;
   padding-top: 25px;
   padding-bottom: 50px;
   clear: both;
