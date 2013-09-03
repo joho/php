@@ -1,0 +1,10 @@
+{
+  "name": "whoisjohnbarton.com",
+  "devDependencies": {
+    "bower": "x",
+    "autoprefixer": "x",
+    "node-sass": "x",
+    "wach": "x"
+  }
+}
+
