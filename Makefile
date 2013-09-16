@@ -83,16 +83,8 @@ run: all
 watch: 
 	$(BIN)/wachs -o "$(SASS)/**/*.scss,**/*.go" "make run"
  
-# The final CSS file
-$(DIST)/stylesheets/styles.css: $(SASS)/styles.scss
-	$(BIN)/node-sass $(SASS)/styles.scss $(DIST)/stylesheets/styles.css
-	$(BIN)/autoprefixer --browsers $(AUTOPREFIXER_BROWSERS) $(DIST)/stylesheets/styles.css
- 
-$(DIST)/stylesheets/wide.css: $(SASS)/wide.scss
-	$(BIN)/node-sass $(SASS)/wide.scss $(DIST)/stylesheets/wide.css
-	$(BIN)/autoprefixer --browsers $(AUTOPREFIXER_BROWSERS) $(DIST)/stylesheets/wide.css
-
-$(DIST)/stylesheets/narrow.css: $(SASS)/narrow.scss
-	$(BIN)/node-sass $(SASS)/narrow.scss $(DIST)/stylesheets/narrow.css
-	$(BIN)/autoprefixer --browsers $(AUTOPREFIXER_BROWSERS) $(DIST)/stylesheets/narrow.css
+# The final CSS files
+$(DIST)/stylesheets/%.css: $(SASS)/%.scss
+	$(BIN)/node-sass $< $@ 
+	$(BIN)/autoprefixer --browsers $(AUTOPREFIXER_BROWSERS) $@
 
