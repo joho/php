@@ -1,1 +1,1 @@
-web: whoisjohnbarton.com
+web: whoisjohnbarton

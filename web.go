@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/joho/whoisjohnbarton.com/homepage"
+	"github.com/joho/whoisjohnbarton/homepage"
 	"html/template"
 	"log"
 	"net/http"
