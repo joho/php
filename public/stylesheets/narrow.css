@@ -3,7 +3,7 @@ body {
 }
 
 .body {
-  min-height: 100%
+  min-height: 100%;
 }
 
 h1 {
@@ -30,8 +30,19 @@ h1 {
 }
 
 .footer {
-  margin-left: -20px; margin-right: -20px; margin-bottom: -20px; overflow: hidden;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-bottom: -20px;
+  overflow: hidden;
   font-weight: 600;
-  blockquote { font-size: 18px; line-height: 1.4; margin: 20px 20px 0 20px; }
-  .quote-source { font-size: 14px; }
+}
+
+.footer blockquote {
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 20px 20px 0 20px;
+}
+
+.footer .quote-source {
+  font-size: 14px;
 }

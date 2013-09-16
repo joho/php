@@ -1,5 +1,3 @@
-@import "compass/css3/box-shadow";
-
 $background_color: darken(#fdfdfd, 5%);
 $text_color: #111111;
 $heading_green: #3BB304;
@@ -93,7 +91,7 @@ h2 {
   font-weight: 600;
   margin-bottom: 12px;
   border-bottom: 1px solid $border_color;
-  @include box-shadow(0 2px 3px -2px $border_color);
+  box-shadow: 0 2px 3px -2px $border_color;
   color: lighten($text_color, 40%);
 }
 
@@ -113,7 +111,7 @@ li {
 }
 
 .footer {
-  @include box-shadow(0 3px 3px 0 darken($footer_background_color, 5%) inset);
+  box-shadow: 0 3px 3px 0 darken($footer_background_color, 5%) inset;
 
   a {
     color: darken($text_green, 10%);
