@@ -62,28 +62,37 @@ DIST=public
 #
 # If something isn't re-compiling double-check the changed file is in the
 # target's dependencies list.
- 
-# Compile the final targets
-all: $(DIST)/styles.css $(DIST)/narrow.css $(DIST)/wide.css 
- 
+
 # Destroy the final targets
 clean:
-	rm -f $(DIST)/*.css
- 
+	rm -f $(DIST)/stylesheets/*.css
+	rm -f web
+
+# Compile the final targets
+all: assets go
+
+assets: $(DIST)/stylesheets/styles.css $(DIST)/stylesheets/narrow.css $(DIST)/stylesheets/wide.css 
+
+go:
+	go build web.go
+
+run: all
+	./web
+
 # Watch the filesystem and recompile on file modification
-watch:
-	$(BIN)/wach -o "$(SASS)/**/*" make all
+watch: 
+	$(BIN)/wachs -o "$(SASS)/**/*.scss,*.go" "make run"
  
 # The final CSS file
-$(DIST)/styles.css: $(SASS)/styles.scss
-	$(BIN)/node-sass $(SASS)/styles.scss $(DIST)/styles.css
-	$(BIN)/autoprefixer --browsers $(AUTOPREFIXER_BROWSERS) $(DIST)/styles.css
+$(DIST)/stylesheets/styles.css: $(SASS)/styles.scss
+	$(BIN)/node-sass $(SASS)/styles.scss $(DIST)/stylesheets/styles.css
+	$(BIN)/autoprefixer --browsers $(AUTOPREFIXER_BROWSERS) $(DIST)/stylesheets/styles.css
  
-$(DIST)/wide.css: $(SASS)/wide.scss
-	$(BIN)/node-sass $(SASS)/wide.scss $(DIST)/wide.css
-	$(BIN)/autoprefixer --browsers $(AUTOPREFIXER_BROWSERS) $(DIST)/wide.css
+$(DIST)/stylesheets/wide.css: $(SASS)/wide.scss
+	$(BIN)/node-sass $(SASS)/wide.scss $(DIST)/stylesheets/wide.css
+	$(BIN)/autoprefixer --browsers $(AUTOPREFIXER_BROWSERS) $(DIST)/stylesheets/wide.css
 
-$(DIST)/narrow.css: $(SASS)/narrow.scss
-	$(BIN)/node-sass $(SASS)/narrow.scss $(DIST)/narrow.css
-	$(BIN)/autoprefixer --browsers $(AUTOPREFIXER_BROWSERS) $(DIST)/narrow.css
+$(DIST)/stylesheets/narrow.css: $(SASS)/narrow.scss
+	$(BIN)/node-sass $(SASS)/narrow.scss $(DIST)/stylesheets/narrow.css
+	$(BIN)/autoprefixer --browsers $(AUTOPREFIXER_BROWSERS) $(DIST)/stylesheets/narrow.css
 
