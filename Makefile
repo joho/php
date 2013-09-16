@@ -52,6 +52,7 @@ SASS=views/stylesheets
 BIN=node_modules/.bin
 BOWER=bower_components
 DIST=public
+STYLESHEETS=$(subst ${SASS},${DIST}/stylesheets,$(patsubst %.scss,%.css,$(wildcard $(SASS)/*.scss)))
  
 # Targets
 #
@@ -71,7 +72,7 @@ clean:
 # Compile the final targets
 all: assets go
 
-assets: $(DIST)/stylesheets/styles.css $(DIST)/stylesheets/narrow.css $(DIST)/stylesheets/wide.css 
+assets: $(STYLESHEETS)
 
 go:
 	go build web.go
