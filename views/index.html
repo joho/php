@@ -33,27 +33,27 @@
       <div class="subsection words">
         <h2>Words</h2>
         <ul>
-          <% @recent_writings.each do |link| %>
-            <li><a href="<%= link.url %>"><%= link.title %></a></li>
-          <% end %>
+          {{ range .Writings }}
+            <li><a href="{{ .Url }}">{{ .Title }}</a></li>
+          {{ end }}
         </ul>
       </div>
 
       <div class="subsection">
         <h2>Code</h2>
         <ul>
-          <% @interesting_projects.each do |link| %>
-            <li><a href="<%= link.url %>"><%= link.title %></a></li>
-          <% end %>
+          {{ range .Projects }}
+            <li><a href="{{ .Url }}">{{ .Title }}</a></li>
+          {{ end }}
         </ul>
       </div>
       
       <div class="subsection">
         <h2>Social Stuff</h2>
         <ul>
-          <% @social_networks.each do |link| %>
-            <li><a href="<%= link.url %>"><%= link.title %></a></li>
-          <% end %>
+          {{ range .Social }}
+            <li><a href="{{ .Url }}">{{ .Title }}</a></li>
+          {{ end }}
         </ul>
       </div>
 
@@ -62,14 +62,14 @@
     <div class="footer">
       <div class="content">
         <blockquote>
-          <%= @quote.text %>
+          {{ .Quote.Text }}
         </blockquote>
         <span class="quote-source">
-          <% if @quote.link %>
-            <a href="<%= @quote.link %>"><%= @quote.author %></a>
-          <% else %>
-            <%= @quote.author %>
-          <% end %>
+          {{ if .Quote.Url }}
+            <a href="{{ .Quote.Url }}">{{ .Quote.Author }}</a>
+          {{ else }}
+            {{ .Quote.Author }}
+          {{ end }}
         </span>
       </div>
     </div>
@@ -88,4 +88,3 @@
 
   </body>
 </html>
-
