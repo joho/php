@@ -2,5 +2,4 @@ node_modules/
 .bundle/
 bin/
 .sass-cache/
-public/stylesheets
 web
