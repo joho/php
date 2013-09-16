@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>John Barton - Web Dev &amp; ROFLScaler</title>
+    <link href="/stylesheets/styles.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="/stylesheets/narrow.css" media="screen and (max-width: 44em)">
+    <link rel="stylesheet" href="/stylesheets/wide.css" media="screen and (min-width: 44em)">
+    <!--[if (gte IE 6)&(lte IE 8)]>
+      <link rel="stylesheet" href="/stylesheets/wide.css">
+    <![endif]-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <div class="content">
+      <h1><span class="who">who</span><span class="is">is</span><span class="john-barton">johnbarton</span><span class="dot-com">.com</span></h1>
+      <div class="profile_image">
+        <img src="/side-shot-square.jpg" />
+      </div>
+      <div class="bio">
+        <p>
+        I'm the <span>co-founder</span> of Melbourne-based social film review startup <a href="http://goodfil.ms/">Goodfilms</a>.
+        </p>
+        <p>Over the past few years I've also been the <span>development manager</span> for all of the <a href="http://envato.com/">Envato</a> marketplaces, and a <span>developer</span> on a few other projects. Most notable of past coding jobs would be <a href="http://mycareer.com.au/">MyCareer</a>, and <a href="http://thevine.com.au/">The Vine</a>.
+        </p>
+        <p>
+          Outside of my work, I'm pretty serious about all the serious things in life: <strong>Bikes</strong>, <strong>Books</strong>, and <strong>Booze</strong>.  
+        </p>
+      </div>
+
+      <div class="subsection words">
+        <h2>Words</h2>
+        <ul>
+          {{ range .Writings }}
+            <li><a href="{{ .Url }}">{{ .Title }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h2>Code</h2>
+        <ul>
+          {{ range .Projects }}
+            <li><a href="{{ .Url }}">{{ .Title }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+      
+      <div class="subsection">
+        <h2>Social Stuff</h2>
+        <ul>
+          {{ range .Social }}
+            <li><a href="{{ .Url }}">{{ .Title }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      <div class="content">
+        <blockquote>
+          {{ .Quote.Text }}
+        </blockquote>
+        <span class="quote-source">
+          {{ if .Quote.Url }}
+            <a href="{{ .Quote.Url }}">{{ .Quote.Author }}</a>
+          {{ else }}
+            {{ .Quote.Author }}
+          {{ end }}
+        </span>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-708262-2']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+  </body>
+</html>
