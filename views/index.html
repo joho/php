@@ -61,14 +61,15 @@
 
     <div class="footer">
       <div class="content">
+        {{ $quote := .Quote }}
         <blockquote>
-          {{ .Quote.Text }}
+          {{ $quote.Text }}
         </blockquote>
         <span class="quote-source">
-          {{ if .Quote.Url }}
-            <a href="{{ .Quote.Url }}">{{ .Quote.Author }}</a>
+          {{ if $quote.Url }}
+            <a href="{{ $quote.Url }}">{{ $quote.Author }}</a>
           {{ else }}
-            {{ .Quote.Author }}
+            {{ $quote.Author }}
           {{ end }}
         </span>
       </div>
