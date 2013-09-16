@@ -81,7 +81,7 @@ run: all
 
 # Watch the filesystem and recompile on file modification
 watch: 
-	$(BIN)/wachs -o "$(SASS)/**/*.scss,*.go" "make run"
+	$(BIN)/wachs -o "$(SASS)/**/*.scss,**/*.go" "make run"
  
 # The final CSS file
 $(DIST)/stylesheets/styles.css: $(SASS)/styles.scss
