@@ -31,6 +31,8 @@ func New() *homePage {
 	p := new(homePage)
 	// writings
 	p.Writings = []link{
+		link{"Adopt The Pace of Nature", "http://blog.whoisjohnbarton.com/post/60153459731/adopt-the-pace-of-nature"},
+		link{"The Rules For Not Hiring Someone", "http://blog.whoisjohnbarton.com/post/60250771346/the-rules-for-not-hiring-someone"},
 		link{"Web Scale for the Rest of Us (RubyConfAU Talk)", "http://vimeo.com/61342269"},
 		link{"Interview for The Fetch", "http://blog.thefetch.com/2012/10/29/interview-melbourne-local-john-barton/"},
 		link{"The Minimum Viable Rails Stack", "http://goodfil.ms/blog/posts/2012/09/15/minimum-viable-rails-stack/"},
@@ -40,9 +42,9 @@ func New() *homePage {
 
 	// projects
 	p.Projects = []link{
-		link{"This site (Sinatra + SCSS)", "https://github.com/joho/whoisjohnbarton.com"},
+		link{"This site (Sinatra + SCSS)", "https://github.com/joho/whoisjohnbarton"},
 		link{"Spoilerless Tour De France", "https://github.com/joho/letour"},
-		link{"Loose (and fast) Postgres Row Counts", "https://github.com/goodfilms/postgres_loose_table_counts"},
+		link{"Golang port of dotenv (godotenv)", "https://github.com/joho/godotenv"},
 		link{"Netflix API wrapper for Ruby", "https://github.com/goodfilms/netflix-ruby"},
 		link{"HTTP Status codes 7xx (Developer Fouls)", "https://github.com/joho/7XX-rfc"},
 	}
