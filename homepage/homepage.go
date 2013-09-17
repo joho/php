@@ -67,6 +67,7 @@ func New() *homePage {
 		{"Don't you know who I am?", "Ben Schwarz", "http://germanforhipster.com"},
 		{"I think we underestimate the complexity of deep sea cabling", "@deepjohnbarton", "https://twitter.com/deepjohnbarton/status/250782278349897728"},
 		{"Ninety percent of everything is crap.", "Sturgeon's Law", "http://en.wikipedia.org/wiki/Sturgeon's_Law"},
+		{"love of bustle is not industry – it is only the restlessness of a hunted mind", "Seneca", ""},
 	}
 
 	return p
