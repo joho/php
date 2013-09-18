@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
+	"github.com/joho/prohttphandler"
 	"github.com/joho/whoisjohnbarton/homepage"
-	"github.com/joho/whoisjohnbarton/prohttphandler"
 	"html/template"
 	"log"
 	"net/http"
@@ -17,7 +17,7 @@ func main() {
 	}
 	listenOn := fmt.Sprintf(":%v", portNumber)
 
-	handler := prohttphandler.New()
+	handler := prohttphandler.New("public")
 	handler.ExactMatchFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		p := homepage.New()
 		t, err := template.ParseFiles("views/index.html")
