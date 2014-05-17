@@ -49,6 +49,7 @@ func New() *homePage {
 		{"Golang port of dotenv (godotenv)", "https://github.com/joho/godotenv"},
 		{"Netflix API wrapper for Ruby", "https://github.com/goodfilms/netflix-ruby"},
 		{"HTTP Status codes 7xx (Developer Fouls)", "https://github.com/joho/7XX-rfc"},
+		{"Easy SQL queries to CSV in Go (sqltocsv)", "https://github.com/joho/sqltocsv"},
 	}
 
 	// social urls
