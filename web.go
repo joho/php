@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"os"
 
+	"github.com/joho/php/homepage"
 	"github.com/joho/prohttphandler"
-	"github.com/joho/whoisjohnbarton/homepage"
 )
 
 func main() {
