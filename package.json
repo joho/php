@@ -1,10 +1,8 @@
 {
-  "name": "whoisjohnbarton.com",
-  "devDependencies": {
-    "bower": "x",
-    "autoprefixer": "x",
+  "name": "php",
+  "dependencies": {
+    "autoprefixer-cli": "x",
     "node-sass": "x",
-    "wach": "x"
+    "watch": "x"
   }
 }
-

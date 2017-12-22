@@ -1,153 +1,185 @@
-$background_color: darken(#fdfdfd, 5%);
-$text_color: #111111;
-$heading_green: #3BB304;
-$text_green: darken($heading_green, 10%);
-$border_color: lighten($text_color, 70%);
-
-$footer_background_color: lighten($text_color, 40%);
-$footer_text_color: darken($background_color, 5%);
-
-// css resets
-
-// border box all the things!
-* {
+/* minimal reset from: https://alligator.io/css/minimal-css-reset/ */
+html {
   box-sizing: border-box;
+  font-size: 16px;
 }
 
-/*
-	Margin, padding, and border resets
-	except for form elements
-*/
-
-body, div,
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend, th, td,
-article, aside, figure, footer, header, hgroup, menu, nav, section {
-	margin: 0;
-	padding: 0;
-	border: 0;
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
-/*
-	Consistency fixes
-	adopted from http://necolas.github.com/normalize.css/
-*/
-
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, nav, section, audio, canvas, video {
-	display: block;
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
 }
-// End Resets
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* end reset */
+
+/* colours: https://en.wikipedia.org/wiki/List_of_software_palettes#Microsoft_Windows_default_20-color_palette */
+$white: #ffffff;
+$light-grey: #c0c0c0;
+$dark-grey: #A0A0A4;
+$black: #000000;
+$blue: #0000ff;
+
+$sans-serif: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif;
+$serif: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+
+$small-screen: "only screen and (max-width : 740px)";
 
 body {
-  background-color: $background_color;
-  color: $text_color;
-  font: 18px/1.4 "Helvetica Neue", Helvetica, sans-serif;
-}
+  border: solid 3px $light-grey;
 
-.profile_image {
-  img { width: 100%;  }
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
-}
+  min-height: 100vh;
+  min-width: 100vw;
 
-.bio p {
-  &:first-child {
-    font-size: 21px;
-    a { font-weight: 600; }
+  font-family: $serif;
+
+  padding-left: 1rem;
+
+  @media #{$small-screen} {
+    padding-left: 0.4rem;
   }
-  strong { font-weight: 600; }
-  & + p { margin-top: 20px; }
+
+  display: flex;
+  flex-flow: column nowrap;
 }
 
-.green {
-  color: $text_green;
+nav {
+  display: flex;
+  flex-flow: row wrap;
+
+  > :not(:last-child) {
+    margin-right: 1rem;
+  }
+  padding-left: 1px;
+}
+
+.button-group {
+  display: flex;
+}
+
+.button {
+  background-color: $light-grey;
+  color: $black;
+  
+  text-decoration: none;
+  display: block;
+  box-shadow: 0 1px 0 0 $black,
+    0 -1px 0 0 $black,
+    1px 0 0 0 $black,
+    -1px 0 0 0 $black;
+  
+  border: 1px solid;
+  border-color: $white $dark-grey $dark-grey $white;
+  
+  font-size: 14px;
+  font-family: $sans-serif; 
+  padding: 4px 8px 2px;
+
+  margin-top: 0.4rem;
+  
+  &::first-letter {
+    text-decoration: underline;
+  }
+  
+  &:active {
+    border-color: $dark-grey $white $white $dark-grey;
+  }
 }
 
 h1 {
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 48px;
-  font-weight: 300;
-  line-height: 1;
-
-  .who { font-weight: 300; }
-  .is { font-weight: 400; }
-  .john-barton { color: $heading_green; font-weight: 600; margin-left: 3px; }
-  .dot-com { font-weight: 800; }
+  background-color: $black;
+  color: $white;
+  width: 100%;
+  padding: 0.3em 0.4em 0.1em;
+  font-weight: 500;
+  font-size: 2.6em;
+  margin-top: 0.7rem;
 }
 
-.subsection.words {
-  clear: left;
-}
+.content {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
 
-h2 {
-  font-size: 14px;
-  line-height: 1;
-  padding-bottom: 7px;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 600;
-  margin-bottom: 12px;
-  border-bottom: 1px solid $border_color;
-  box-shadow: 0 2px 3px -2px $border_color;
-  color: lighten($text_color, 40%);
-}
+  padding-right: 0.2rem;
 
-a {
-  color: $text_green;
-  text-decoration: none;
-  border-bottom: 1px dotted $text_green;
-}
-
-li {
-  list-style-type: square;
-  margin-left: 17px;
-  line-height: 1.4em;
-  padding-bottom: 0.5em;
-  font-size: 0.8em;
-  color: lighten($text_color, 30%);
-}
-
-.footer {
-  box-shadow: 0 3px 3px 0 darken($footer_background_color, 5%) inset;
-
-  a {
-    color: darken($text_green, 10%);
-    border-bottom: 1px dotted darken($text_green, 10%);
-    font-weight: 400;
+  @media #{$small-screen} {
+    flex-direction: column;
   }
 
-  font-weight: 300;
-  color: #bbb;
-  margin-top: 50px;
-  padding-top: 25px;
-  padding-bottom: 50px;
-  clear: both;
-  background-color: $footer_background_color;
-  text-align: center;
+  .multimedia {
+    flex: 1 auto;
+    max-width: 20rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
 
-  .quote-source {
-    display: inline-block;
-    margin: 20px 0;
-    &::before {
-      content: "\2014";
-      margin-right: 0.5em;
+    .button {
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      margin: 1px 1px 0.4rem 1px;
+
+      &::after {
+        content:url('/photo-button.png');
+        width: 26px;
+        height: 18px;
+      }
     }
   }
 
-  blockquote {
-    font-family: Georgia;
-    font-size: 38px;
-    line-height: 1.2;
+  .text {
+    flex: 2 0px;
+    padding: 0 1rem;
+    font-size: 1.2em;
+    line-height: 1.3em;
 
-    &::before {
-      content: "\201C";
-      font-size: 2.5em;
-      line-height: 0.1em;
-      vertical-align: -0.3em;
-      margin-right: 0.15em;
+    @media #{$small-screen} {
+      padding: 0.3rem 0;
     }
+
+    p:not(:last-child) {
+      margin-bottom: 1.3em;
+    }
+
+    a {
+      color: $blue;
+
+      &:visited {
+        color: $blue;
+      }
+
+      &:hover, &:active {
+        text-decoration-style: dotted;
+      }
+    }
+  }
+}
+
+.photo-callout {
+  font-family: $sans-serif;
+  font-size: 0.7em;
+  display: flex;
+  align-items: baseline;
+
+  &::before {
+    content:url('/photo-body-text.png');
+    width: 31px;
+    height: 15px;
+    margin-right: 0.3em;
   }
 }
