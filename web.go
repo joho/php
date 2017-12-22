@@ -2,12 +2,13 @@ package main
 
 import (
 	"fmt"
-	"github.com/joho/prohttphandler"
-	"github.com/joho/whoisjohnbarton/homepage"
 	"html/template"
 	"log"
 	"net/http"
 	"os"
+
+	"github.com/joho/prohttphandler"
+	"github.com/joho/whoisjohnbarton/homepage"
 )
 
 func main() {
@@ -28,5 +29,6 @@ func main() {
 		}
 	})
 
+	log.Printf("Listening on %v", listenOn)
 	log.Fatal(http.ListenAndServe(listenOn, handler))
 }
