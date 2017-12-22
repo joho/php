@@ -1,5 +1,5 @@
 {
-  "name": "whoisjohnbarton.com",
+  "name": "php",
   "dependencies": {
     "autoprefixer-cli": "x",
     "node-sass": "x",
