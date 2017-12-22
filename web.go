@@ -45,6 +45,7 @@ func LegacyRedirectMiddleware(next http.Handler) http.Handler {
 		legacyDomain := r.Host != "johnbarton.co"
 
 		if !devRequest && (legacyDomain || !requestHTTPS) {
+			log.Printf("Redirecting %v dev:%v https:%v legacydomain:%v", r.URL, devRequest, requestHTTPS, legacyDomain)
 			URL := *r.URL
 			URL.Scheme = "https"
 			URL.Host = "johnbarton.co"
