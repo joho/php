@@ -40,12 +40,11 @@ func Index(w http.ResponseWriter, r *http.Request) {
 
 func LegacyRedirectMiddleware(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		requestHTTPS := r.URL.Scheme == "https"
 		devRequest := r.Host == "localhost:5000"
 		legacyDomain := r.Host != "johnbarton.co"
 
-		if !devRequest && (legacyDomain || !requestHTTPS) {
-			log.Printf("Redirecting %v dev:%v https:%v legacydomain:%v", r.URL, devRequest, requestHTTPS, legacyDomain)
+		if !devRequest && legacyDomain {
+			log.Printf("Redirecting %v dev:%v legacydomain:%v", r.URL, devRequest, legacyDomain)
 			URL := *r.URL
 			URL.Scheme = "https"
 			URL.Host = "johnbarton.co"
