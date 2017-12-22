@@ -34,14 +34,21 @@ $blue: #0000ff;
 $sans-serif: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif;
 $serif: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
 
+$small-screen: "only screen and (max-width : 740px)";
+
 body {
   border: solid 3px $light-grey;
 
   min-height: 100vh;
+  min-width: 100vw;
 
   font-family: $serif;
 
   padding-left: 1rem;
+
+  @media #{$small-screen} {
+    padding-left: 0.4rem;
+  }
 
   display: flex;
   flex-flow: column nowrap;
@@ -106,6 +113,12 @@ h1 {
   flex-flow: row wrap;
   justify-content: flex-start;
 
+  padding-right: 0.2rem;
+
+  @media #{$small-screen} {
+    flex-direction: column;
+  }
+
   .multimedia {
     flex: 1 auto;
     max-width: 20rem;
@@ -131,13 +144,28 @@ h1 {
 
   .text {
     flex: 2 0px;
-    min-width: 40rem;
     padding: 0 1rem;
     font-size: 1.2em;
     line-height: 1.3em;
 
+    @media #{$small-screen} {
+      padding: 0.3rem 0;
+    }
+
     p:not(:last-child) {
       margin-bottom: 1.3em;
+    }
+
+    a {
+      color: $blue;
+
+      &:visited {
+        color: $blue;
+      }
+
+      &:hover, &:active {
+        text-decoration-style: dotted;
+      }
     }
   }
 }
