@@ -2,14 +2,16 @@ package main
 
 import (
 	"fmt"
-	"html/template"
+	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
 	"strings"
+	"text/template"
 
-	"github.com/joho/php/homepage"
+	"github.com/joho/php/pages"
 	"github.com/joho/prohttphandler"
+	"github.com/russross/blackfriday"
 )
 
 func main() {
@@ -20,7 +22,13 @@ func main() {
 	listenOn := fmt.Sprintf(":%v", portNumber)
 
 	handler := prohttphandler.New("public")
-	handler.ExactMatchFunc("/", Index)
+
+	home := pages.Homepage()
+	handler.ExactMatchFunc(home.Path, Render(home))
+
+	for _, post := range pages.AllPosts() {
+		handler.ExactMatchFunc(post.Path, Render(post))
+	}
 
 	withRedirects := LegacyRedirectMiddleware(handler)
 
@@ -28,14 +36,31 @@ func main() {
 	log.Fatal(http.ListenAndServe(listenOn, withRedirects))
 }
 
-func Index(w http.ResponseWriter, r *http.Request) {
-	p := homepage.New()
-	t, err := template.ParseFiles("views/index.html")
-	if err == nil {
-		t.Execute(w, p)
-	} else {
-		fmt.Fprintf(w, "Error parsing %v error was:\n\n%v", r.URL.Path, err)
+func Render(page *pages.Page) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		_, err := page.Content()
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusNotFound)
+			return
+		}
+
+		t, err := template.ParseFiles("views/page.html")
+		if err == nil {
+			t.Execute(w, page)
+		} else {
+			fmt.Fprintf(w, "Error parsing %v error was:\n\n%v", r.URL.Path, err)
+		}
 	}
+}
+
+func Post(w http.ResponseWriter, r *http.Request) {
+	file, err := ioutil.ReadFile("posts/hello-world.md")
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	body := blackfriday.Run(file)
+	w.Write(body)
 }
 
 func LegacyRedirectMiddleware(next http.Handler) http.Handler {
