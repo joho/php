@@ -22,7 +22,7 @@ func init() {
 			PublishDate: publishDate("2017-12-31"),
 
 			ImagePath:    "/post-images/top-nine-2017.png",
-			ImageCaption: "What Instagram thinks is my top nine of 2017",
+			ImageCaption: "My Instagram top nine of 2017",
 
 			ContentPath: "posts/2017-in-review.md",
 		},
