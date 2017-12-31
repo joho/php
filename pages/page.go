@@ -45,3 +45,11 @@ func (p *Page) Content() (string, error) {
 
 	return string(content), nil
 }
+
+// PublishDateFormatted returns ISO8601/RFC3339 date
+func (p *Page) PublishDateFormatted() string {
+	if p.PublishDate != nil {
+		return p.PublishDate.Format(time.RFC3339)
+	}
+	return ""
+}
