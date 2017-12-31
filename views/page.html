@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>John Barton - Engineering Lead</title>
+    <title>{{ .ExpandedTitle }}</title>
     <link href="/stylesheets/styles.css" rel="stylesheet" type="text/css">
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -26,6 +26,9 @@
     <meta property="og:description" content="{{ .Description }}" /> 
     <meta property="og:site_name" content="johnbarton.co" />
     {{if .PublishDateFormatted}}<meta property="article:published_time" content="{{ .PublishDateFormatted }}" />{{end}}
+
+    <link rel="alternate" type="application/atom+xml" title="Posts" href="/feed.xml" />
+    <link rel="canonical" href="{{ .AbsoluteURL }}" />
   </head>
 
   <body>

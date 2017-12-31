@@ -56,6 +56,16 @@ func (p *Page) PublishDateFormatted() string {
 	return ""
 }
 
+func (p *Page) UpdatedDateFormatted() string {
+	if p.PublishDate != nil {
+		return p.PublishDateFormatted()
+	} else if len(AllPosts()) > 0 {
+		return AllPosts()[0].PublishDateFormatted()
+	} else {
+		return ""
+	}
+}
+
 func (p *Page) RecentPosts() []*Page {
 	return AllPosts()
 }

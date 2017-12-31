@@ -23,6 +23,7 @@ func main() {
 
 	home := pages.Homepage()
 	handler.ExactMatchFunc(home.Path, Render(home))
+	handler.ExactMatchFunc("/feed.xml", Feed(home))
 
 	for _, post := range pages.AllPosts() {
 		handler.ExactMatchFunc(post.Path, Render(post))
@@ -44,6 +45,19 @@ func Render(page *pages.Page) http.HandlerFunc {
 
 		t, err := template.ParseFiles("views/page.html")
 		if err == nil {
+			w.Header().Set("Content-Type", "text/html; charset=utf-8")
+			t.Execute(w, page)
+		} else {
+			fmt.Fprintf(w, "Error parsing %v error was:\n\n%v", r.URL.Path, err)
+		}
+	}
+}
+
+func Feed(page *pages.Page) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		t, err := template.ParseFiles("views/feed.xml")
+		if err == nil {
+			w.Header().Set("Content-Type", "text/xml; charset=utf-8")
 			t.Execute(w, page)
 		} else {
 			fmt.Fprintf(w, "Error parsing %v error was:\n\n%v", r.URL.Path, err)
