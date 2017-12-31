@@ -14,5 +14,7 @@ func Homepage() *Page {
 		ImageCaption: "At home, with books",
 
 		ContentPath: "home.md",
+
+		ShowPostList: true,
 	}
 }

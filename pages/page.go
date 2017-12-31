@@ -21,6 +21,8 @@ type Page struct {
 	Path string
 
 	ContentPath string
+
+	ShowPostList bool
 }
 
 var absoluteRoot = "https://johnbarton.co"
@@ -52,4 +54,8 @@ func (p *Page) PublishDateFormatted() string {
 		return p.PublishDate.Format(time.RFC3339)
 	}
 	return ""
+}
+
+func (p *Page) RecentPosts() []*Page {
+	return AllPosts()
 }

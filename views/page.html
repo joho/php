@@ -63,6 +63,14 @@
       <div class="text">
           <div class="photo-callout">{{ .ImageCaption }}</div>
           {{ .Content }}
+          {{ if .ShowPostList }}
+          <h3>Recent Posts</h3>
+          <ul>
+            {{ range .RecentPosts }}
+            <li><a href="{{ .Path }}">{{ .ExpandedTitle }}</a></li>
+            {{ end }}
+          </ul>
+          {{ end }}
       </div> 
     </div>
     
