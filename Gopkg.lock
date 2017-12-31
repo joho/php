@@ -7,9 +7,21 @@
   packages = ["."]
   revision = "7d7ff700f5f37c5883606096962e3f99cfb036c1"
 
+[[projects]]
+  name = "github.com/russross/blackfriday"
+  packages = ["."]
+  revision = "cadec560ec52d93835bf2f15bd794700d3a2473b"
+  version = "v2.0.0"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/shurcooL/sanitized_anchor_name"
+  packages = ["."]
+  revision = "86672fcb3f950f35f2e675df2240550f2a50762f"
+
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "45eb918f037a372f68a024c105fa4895e27c2beb872469310eff8eb530a16115"
+  inputs-digest = "2d34c63a77012f1a391350094072a87af9b27cacc34570ce9a5b8f1cdd0ad0be"
   solver-name = "gps-cdcl"
   solver-version = 1
