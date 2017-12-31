@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
@@ -11,7 +10,6 @@ import (
 
 	"github.com/joho/php/pages"
 	"github.com/joho/prohttphandler"
-	"github.com/russross/blackfriday"
 )
 
 func main() {
@@ -51,16 +49,6 @@ func Render(page *pages.Page) http.HandlerFunc {
 			fmt.Fprintf(w, "Error parsing %v error was:\n\n%v", r.URL.Path, err)
 		}
 	}
-}
-
-func Post(w http.ResponseWriter, r *http.Request) {
-	file, err := ioutil.ReadFile("posts/hello-world.md")
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
-	}
-	body := blackfriday.Run(file)
-	w.Write(body)
 }
 
 func LegacyRedirectMiddleware(next http.Handler) http.Handler {
