@@ -13,18 +13,18 @@ func AllPosts() []*Page {
 func init() {
 	postsReverseChronological = []*Page{
 		&Page{
-			Path: "/posts/hello-world",
+			Path: "/posts/2017-in-review",
 
-			Title:         "Hello World",
-			ExpandedTitle: "Hello World",
-			Description:   "A test post",
+			Title:         "2017 In Review",
+			ExpandedTitle: "2017 In Review",
+			Description:   "A quick braindump of the year primarily to test out the new blogging feature I built for my site.",
 
 			PublishDate: publishDate("2017-12-31"),
 
-			ImagePath:    "/john-barton-dithered.png",
-			ImageCaption: "testing",
+			ImagePath:    "/post-images/top-nine-2017.png",
+			ImageCaption: "What Instagram thinks is my top nine of 2017",
 
-			ContentPath: "posts/hello-world.md",
+			ContentPath: "posts/2017-in-review.md",
 		},
 	}
 }
