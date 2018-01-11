@@ -148,8 +148,20 @@ h1 {
     font-size: 1.2em;
     line-height: 1.3em;
 
+    h2 {
+      padding-bottom: 0.5em;
+    }
+
     @media #{$small-screen} {
       padding: 0.3rem 0;
+    }
+
+    ul {
+      li {
+        margin-left: 1em;
+        list-style-type: circle;
+      }
+      margin-bottom: 0.4em;
     }
 
     p:not(:last-child) {

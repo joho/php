@@ -13,6 +13,20 @@ func AllPosts() []*Page {
 func init() {
 	postsReverseChronological = []*Page{
 		&Page{
+			Path: "/posts/three-flavours-of-iteration",
+
+			Title:         "Three flavours of iteration",
+			ExpandedTitle: "Three flavours of iteration",
+			Description:   "In the project kickoff meeting your team has all agreed to iterate towards a solution. Sounds great. Everyone's agreed. (Narrator's voice) They hadn't",
+
+			PublishDate: publishDate("2018-01-11"),
+
+			ImagePath:    "/post-images/catlike-agility.jpg",
+			ImageCaption: "This kind of agility?",
+
+			ContentPath: "posts/three-flavours-of-iteration.md",
+		},
+		&Page{
 			Path: "/posts/2017-in-review",
 
 			Title:         "2017 In Review",

@@ -120,9 +120,16 @@ h1 {
     padding: 0 1rem;
     font-size: 1.2em;
     line-height: 1.3em; }
+    .content .text h2 {
+      padding-bottom: 0.5em; }
     @media only screen and (max-width: 740px) {
       .content .text {
         padding: 0.3rem 0; } }
+    .content .text ul {
+      margin-bottom: 0.4em; }
+      .content .text ul li {
+        margin-left: 1em;
+        list-style-type: circle; }
     .content .text p:not(:last-child) {
       margin-bottom: 1.3em; }
     .content .text a {
