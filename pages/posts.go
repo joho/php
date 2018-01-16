@@ -13,6 +13,20 @@ func AllPosts() []*Page {
 func init() {
 	postsReverseChronological = []*Page{
 		&Page{
+			Path: "/posts/book-review-one-strategy",
+
+			Title:         "Book Review: One Strategy",
+			ExpandedTitle: "Book Review: One Strategy by Steven Sinofsky",
+			Description:   "I spent a year reading this book and if you manage products or engineers you should too.",
+
+			PublishDate: publishDate("2018-01-17"),
+
+			ImagePath:    "/post-images/one-strategy.png",
+			ImageCaption: "It was cheaper to buy a physical copy",
+
+			ContentPath: "posts/book-review-one-strategy.md",
+		},
+		&Page{
 			Path: "/posts/three-flavours-of-iteration",
 
 			Title:         "Three flavours of iteration",
