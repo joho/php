@@ -13,6 +13,20 @@ func AllPosts() []*Page {
 func init() {
 	postsReverseChronological = []*Page{
 		&Page{
+			Path: "/posts/developers-on-call",
+
+			Title:         "Developers On Call",
+			ExpandedTitle: "Developers On Call",
+			Description:   "Developers not on call benefit from a status quo that is both morally questionable and ultimately unhelpful for software quality.",
+
+			PublishDate: publishDate("2018-02-11"),
+
+			ImagePath:    "/post-images/tools.png",
+			ImageCaption: "My toolbox as allegory",
+
+			ContentPath: "posts/developers-on-call.md",
+		},
+		&Page{
 			Path: "/posts/book-review-one-strategy",
 
 			Title:         "Book Review: One Strategy",
