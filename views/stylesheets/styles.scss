@@ -156,12 +156,28 @@ h1 {
       padding: 0.3rem 0;
     }
 
+    li {
+      margin-left: 1em;
+    }
+
     ul {
       li {
-        margin-left: 1em;
         list-style-type: circle;
       }
       margin-bottom: 0.4em;
+    }
+
+    ol {
+      li {
+        list-style-type: decimal;
+      }
+      margin-bottom: 0.4em;
+    }
+
+    blockquote {
+      border-left: solid 4px $light-grey;
+      padding-left: 0.3em;
+      margin-left: 1em;
     }
 
     p:not(:last-child) {

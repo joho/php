@@ -125,11 +125,20 @@ h1 {
     @media only screen and (max-width: 740px) {
       .content .text {
         padding: 0.3rem 0; } }
+    .content .text li {
+      margin-left: 1em; }
     .content .text ul {
       margin-bottom: 0.4em; }
       .content .text ul li {
-        margin-left: 1em;
         list-style-type: circle; }
+    .content .text ol {
+      margin-bottom: 0.4em; }
+      .content .text ol li {
+        list-style-type: decimal; }
+    .content .text blockquote {
+      border-left: solid 4px #c0c0c0;
+      padding-left: 0.3em;
+      margin-left: 1em; }
     .content .text p:not(:last-child) {
       margin-bottom: 1.3em; }
     .content .text a {
