@@ -2,7 +2,7 @@
   "name": "php",
   "dependencies": {
     "autoprefixer-cli": "x",
-    "node-sass": "x",
+    "node-sass": "^4.9.0",
     "watch": "x"
   }
 }
