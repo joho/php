@@ -35,9 +35,27 @@ func main() {
 	log.Fatal(http.ListenAndServe(listenOn, withRedirects))
 }
 
+var securityHeaders = map[string]string{
+	"Content-Security-Policy":   `upgrade-insecure-requests`,
+	"Strict-Transport-Security": "max-age=2592000",
+	"X-Xss-Protection":          "1; mode=block",
+	"X-Frame-Options":           "DENY",
+	"X-Content-Type-Options":    "nosniff",
+	"Referrer-Policy":           "strict-origin-when-cross-origin",
+}
+
+func setSecurityHeaders(w http.ResponseWriter) {
+	if os.Getenv("PRODUCTION") == "true" {
+		for key, value := range securityHeaders {
+			w.Header().Set(key, value)
+		}
+	}
+}
+
 func Render(page *pages.Page) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		_, err := page.Content()
+		setSecurityHeaders(w)
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusNotFound)
 			return
@@ -56,11 +74,13 @@ func Render(page *pages.Page) http.HandlerFunc {
 func Feed(page *pages.Page) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		t, err := template.ParseFiles("views/feed.xml")
+		setSecurityHeaders(w)
 		if err == nil {
 			w.Header().Set("Content-Type", "text/xml; charset=utf-8")
 			t.Execute(w, page)
 		} else {
 			fmt.Fprintf(w, "Error parsing %v error was:\n\n%v", r.URL.Path, err)
+			http.Error(w, err.Error(), http.StatusInternalServerError)
 		}
 	}
 }
