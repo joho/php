@@ -40,8 +40,8 @@ var securityHeaders = map[string]string{
 	"Strict-Transport-Security": "max-age=2592000",
 	"X-Xss-Protection":          "1; mode=block",
 	"X-Frame-Options":           "DENY",
-	// "X-Content-Type-Options":    "nosniff",
-	"Referrer-Policy": "strict-origin-when-cross-origin",
+	"X-Content-Type-Options":    "nosniff",
+	"Referrer-Policy":           "strict-origin-when-cross-origin",
 }
 
 func setSecurityHeaders(w http.ResponseWriter) {
