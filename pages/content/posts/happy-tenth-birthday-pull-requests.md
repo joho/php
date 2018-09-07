@@ -21,6 +21,6 @@ If you're interested in code review in general, it's kind of my general theme in
 
 * [Awesome code review](https://github.com/joho/awesome-code-review) - a collection of resources about code review
 * Five Factor Code Review - will be an homage to [Sarah Mei](https://twitter.com/sarahmei)'s [Five Factor Testing](https://www.devmynd.com/blog/five-factor-testing/) article except about, you guessed it, code review
-* Code Review Review is the Manager's Job - Why and how managers should stay engaged in the code review process
+* [Code Review Review is the Manager's Job](https://hecate.co/blog/code-review-review-is-the-managers-job) - Why and how managers should stay engaged in the code review process
 * Code Review Literature Review - I've bought a bunch of old books about code review so you don't have to
 * ...and any other random ideas that spin out while I'm writing those
