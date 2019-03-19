@@ -1,8 +1,8 @@
 {
   "name": "php",
   "dependencies": {
-    "autoprefixer-cli": "x",
-    "node-sass": "^4.11.0",
-    "watch": "x"
+    "autoprefixer-cli": "1.0.0",
+    "node-sass": "4.11.0",
+    "watch": "1.0.2"
   }
 }
