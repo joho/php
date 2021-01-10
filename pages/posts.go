@@ -13,6 +13,20 @@ func AllPosts() []*Page {
 func init() {
 	postsReverseChronological = []*Page{
 		&Page{
+			Path: "/posts/mocking-structural-typescript",
+
+			Title:         "Mocking Structural Types(cript)",
+			ExpandedTitle: "Mocking Structural Types(cript)",
+			Description:   "A little bit of syntactic sugar in TypeScript for cleaner tests and faster feedback on errors with mocks.",
+
+			PublishDate: publishDate("2020-12-31"),
+
+			ImagePath:    "/post-images/cathedral-ranges.jpg",
+			ImageCaption: "One of the bushwalks I didn't do in 2020",
+
+			ContentPath: "posts/mocking-structural-typescript.md",
+		},
+		&Page{
 			Path: "/posts/happy-tenth-birthday-pull-requests",
 
 			Title:         "Happy 10th Birthday Pull Requests!",
