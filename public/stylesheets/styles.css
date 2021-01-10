@@ -26,27 +26,20 @@ body {
   min-width: 100vw;
   font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
   padding-left: 1rem;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-flow: column nowrap; }
+  flex-flow: column nowrap; }
   @media only screen and (max-width: 740px) {
     body {
       padding-left: 0.4rem; } }
 
 nav {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
   padding-left: 1px; }
   nav > :not(:last-child) {
     margin-right: 1rem; }
 
 .button-group {
-  display: -webkit-box;
   display: flex; }
 
 .button {
@@ -77,46 +70,31 @@ h1 {
 
 .content {
   margin-top: 0.5rem;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
-  -webkit-box-pack: start;
-          justify-content: flex-start;
+  flex-flow: row wrap;
+  justify-content: flex-start;
   padding-right: 0.2rem; }
   @media only screen and (max-width: 740px) {
     .content {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-              flex-direction: column; } }
+      flex-direction: column; } }
   .content .multimedia {
-    -webkit-box-flex: 1;
-            flex: 1 auto;
+    flex: 1 auto;
     max-width: 20rem;
-    display: -webkit-box;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-            flex-flow: column nowrap;
-    -webkit-box-align: stretch;
-            align-items: stretch; }
+    flex-flow: column nowrap;
+    align-items: stretch; }
     .content .multimedia .button {
       margin-top: 0;
-      display: -webkit-box;
       display: flex;
-      -webkit-box-align: center;
-              align-items: center;
-      -webkit-box-pack: justify;
-              justify-content: space-between;
+      align-items: center;
+      justify-content: space-between;
       margin: 1px 1px 0.4rem 1px; }
       .content .multimedia .button::after {
         content: url("/photo-button.png");
         width: 26px;
         height: 18px; }
   .content .text {
-    -webkit-box-flex: 2;
-            flex: 2 0px;
+    flex: 2 0px;
     padding: 0 1rem;
     font-size: 1.2em;
     line-height: 1.3em;
@@ -149,14 +127,16 @@ h1 {
       .content .text a:hover, .content .text a:active {
         -webkit-text-decoration-style: dotted;
                 text-decoration-style: dotted; }
+    .content .text code {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 14px;
+      line-height: normal; }
 
 .photo-callout {
   font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
   font-size: 0.7em;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: baseline;
-          align-items: baseline; }
+  align-items: baseline; }
   .photo-callout::before {
     content: url("/photo-body-text.png");
     width: 31px;
