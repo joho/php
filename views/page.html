@@ -3,6 +3,7 @@
   <head>
     <title>{{ .ExpandedTitle }}</title>
     <link href="/stylesheets/styles.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css">
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
@@ -76,7 +77,8 @@
           {{ end }}
       </div> 
     </div>
-    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>    
    
     <script type="text/javascript">
       var _gaq = _gaq || [];
@@ -88,6 +90,8 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
+
+      hljs.initHighlightingOnLoad();
     </script>
 
   </body>
