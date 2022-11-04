@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "dependencies": {
     "autoprefixer-cli": "1.0.0",
-    "node-sass": "5.0.0",
+    "node-sass": "7.0.3",
     "watch": "1.0.2"
   }
 }
