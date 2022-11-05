@@ -1,3 +1,12 @@
+---
+title: Developers On Call
+description: Developers not on call benefit from a status quo that is both morally questionable and ultimately unhelpful for software quality.
+publishdate: 2018-02-11
+
+ExpandedTitle: Developers On Call
+ImagePath: /post-images/tools.png
+ImageCaption: My toolbox as allegory
+---
 Over the past few days Charity Majors has been at the centre of a wide ranging twitter debate around whether developers should go on call. Her position, which I agree with 100%, is that developers should.
 
 Because it's a conversation that's gone on many tangents, it's hard to pick a single twitter thread that's representative. This one in the middle is pretty good. 

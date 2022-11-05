@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>John Barton's Feed</title>
+  <link href="https://johnbarton.co/"/>
+  <updated>{{ .Site.LastChange.UTC.Format "2006-01-02T15:04:05Z" }}</updated>
+  <author>
+    <name>John Barton</name>
+  </author>
+  <id>https://johnbarton.co/</id>
+
+  {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+  {{ range $pages.ByPublishDate.Reverse }}
+    <entry>
+      <title>{{ .Title }}</title>
+      <link href="{{ .Permalink | absURL }}"/>
+      <id>{{ .Permalink | absURL }}</id>
+      <updated>{{ .PublishDate.Format "2006-01-02T15:04:05Z" }}</updated>
+      <summary>{{ .Description }}</summary>
+    </entry>
+  {{ end }}
+
+</feed>

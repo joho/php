@@ -1,3 +1,12 @@
+---
+title: "Book Review: One Strategy"
+description: I spent a year reading this book and if you manage products or engineers you should too.
+publishdate: 2018-01-17
+
+ExpandedTitle: "Book Review: One Strategy by Steven Sinofsky"
+ImagePath: /post-images/one-strategy.png
+ImageCaption: It was cheaper to buy a physical copy
+---
 Today I finally finished reading [One Strategy: Organisation, Planning, and Decision Making](https://www.amazon.com/One-Strategy-Organization-Planning-Decision/dp/0470560452) by Steven Sinofsky and Marco Iansiti. I checked my email to see when I started reading it. Amazon tells me it was delivered on or around December 21st 2016. It's very rare for me to spend just over a year reading a book. I usually finish them quickly or abandon them, but I pushed through on this one.
 
 If you're an engineering or product manager this book is a must read. Format wise the book is a bunch of internal blog posts Steven Sinofsky wrote at Microsoft in the process of building Windows 7 interspersed with some of the most turgid, business-jargon filler content I've had the misfortune to cast my eyes over. In the end, I made it through the book only by skimming over all the non-blog content, which is conveniently in a different typeface.

@@ -1,3 +1,12 @@
+---
+title: Three flavours of iteration
+description: A quick braindump of the year primarily to test out the new blogging feature I built for my site.
+publishdate: 2018-01-11
+
+ExpandedTitle: Three flavours of iteration
+ImagePath: /post-images/catlike-agility.jpg
+ImageCaption: This kind of agility?
+---
 As far as I can tell there are roughly three flavours of working style in an "agile" environment that all get named "iterating".
 
 Let's call the three flavours scientific, greedy, and defensive. There's definitely some overlap between the three. I want to explore them a little in this post a lot of the interesting (BYO airquotes) moments in engineering management come up when the different varieties rub up against each other.
