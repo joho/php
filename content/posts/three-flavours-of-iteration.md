@@ -1,3 +1,12 @@
+---
+title: 2017 In Review4
+description: A quick braindump of the year primarily to test out the new blogging feature I built for my site.
+publish_date: 2017-12-31
+
+ExpandedTitle: 2017 In Review
+ImagePath: /post-images/top-nine-2017.png
+ImageCaption: My Instagram top nine of 2017
+---
 As far as I can tell there are roughly three flavours of working style in an "agile" environment that all get named "iterating".
 
 Let's call the three flavours scientific, greedy, and defensive. There's definitely some overlap between the three. I want to explore them a little in this post a lot of the interesting (BYO airquotes) moments in engineering management come up when the different varieties rub up against each other.

@@ -1,3 +1,12 @@
+---
+title: 2017 In Review3
+description: A quick braindump of the year primarily to test out the new blogging feature I built for my site.
+publish_date: 2017-12-31
+
+ExpandedTitle: 2017 In Review
+ImagePath: /post-images/top-nine-2017.png
+ImageCaption: My Instagram top nine of 2017
+---
 Happy 10th Birthday Github Pull Requests! Introduced on February 23rd 2008 in [their 3rd blog post](https://github.com/blog/3-oh-yeah-there-s-pull-requests-now).
 
 My guess is that in discovering PRs are 10 years old you're having one of two reactions.

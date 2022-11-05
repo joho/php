@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ .Params.ExpandedTitle }}</title>
+    <link href="/stylesheets/styles.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="{{ .Description }}" />
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@johnbarton">
+    <meta name="twitter:title" content="{{ .Params.ExpandedTitle }}">
+    <meta name="twitter:description" content="{{ .Description }}">
+    <meta name="twitter:creator" content="@johnbarton">
+    <meta name="twitter:image" content="{{ .Params.ImagePath | absURL | safeHTMLAttr }}">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="{{ .Params.ExpandedTitle }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ .Permalink | absURL }}" />
+    <meta property="og:image" content="{{ .Params.ImagePath | absURL }}" />
+    <meta property="og:description" content="{{ .Description }}" /> 
+    <meta property="og:site_name" content="johnbarton.co" />
+
+    <link rel="alternate" type="application/atom+xml" title="Posts" href="/feed.xml" />
+    <link rel="canonical" href="https://johnbarton.co/" />
+  </head>
+
+  <body>
+    <nav>
+      <a href="/" class="button">Home</a>
+
+      <div class="button-group">
+        <a href="https://medium.com/@johnbarton" class="button">Medium</a>
+        <a href="https://github.com/joho" class="button">Github</a>
+      </div>
+
+      <div class="button-group">
+        <a href="http://goodreads.com/johnbarton" class="button">Goodreads</a>
+        <a href="http://blog.whoisjohnbarton.com/" class="button">Tumblr</a>
+        <a href="https://au.linkedin.com/in/johnbarton" class="button">Linkedin</a>
+      </div>
+
+      <div class="button-group">
+        <a href="javascript:history.back()" class="button">Go Back</a>
+        <a href="http://info.cern.ch/hypertext/WWW/TheProject.html" class="button">&lt; A</a>
+        <a href="http://hmpg.net/" class="button">Z &gt;</a>
+      </div>
+
+      <a href="https://www.beyondblue.org.au/" class="button">Help</a>
+    </nav>
+
+    <h1>{{ .Title }}</h1>
+
+    <div class="content">
+      <div class="multimedia">
+        <img alt="John Barton" src="{{ .Params.ImagePath }}">
+        <div class="button">{{ .Params.ImageCaption }}</div>
+      </div>
+
+      <div class="text">
+          <div class="photo-callout">{{ .Params.ImageCaption }}</div>
+          {{ .Content }}
+          <h3>Recent Posts</h3>
+          <ul>
+            {{ range .Pages.ByPublishDate }}
+            <li><a href="{{ .Permalink }}">{{ .Params.ExpandedTitle }}</a></li>
+            {{ end }}
+          </ul>
+      </div> 
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>    
+   
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-708262-2']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+      hljs.initHighlightingOnLoad();
+    </script>
+
+  </body>
+</html>

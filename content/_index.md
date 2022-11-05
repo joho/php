@@ -1,3 +1,15 @@
+---
+kind: home
+title: John Barton
+description: >
+   Hi, I'm John Barton. Right now I run engineering for Amber Electric
+   where I herd people and ship the odd bit of Typescript. My true passion is boring 
+   friends and co-workers with slideshow presentations of Nautical History Facts.
+
+ExpandedTitle: John Barton - Engineering Lead
+ImagePath: /john-barton-dithered.png
+ImageCaption: At home, with books
+---
 Hi, I'm John Barton - startup founder, recovering engineering manager and obvious Microsoft Encarta<sup>®</sup> enthusiast. I'm the solo founder of [Hecate](https://hecate.co) which builds tools on top of GitHub to improve team communication. My true passion is boring friends and co-workers alike with slideshow presentations of Nautical History Facts.
             
 I've spent most of my career leading small to mid-sized teams with a focus on developer-driven ops. My last full-time gig was as VP Engineering for [99designs](https://99designs.com). Before 99 I was co-founder of the film centric social network [Goodfilms](https://goodfil.ms/) with the inestimable [Glen Maddern](https://glenmaddern.com/) and [Charlie Gleason](https://charliegleason.com/). Even before that, I led engineering for [the Envato marketplaces](https://market.envato.com/). I did even more things before that which you can scroll through at your leisure on [My Linkedin](http://au.linkedin.com/in/johnbarton).

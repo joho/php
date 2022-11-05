@@ -1,3 +1,12 @@
+---
+title: 2017 In Review1
+description: A quick braindump of the year primarily to test out the new blogging feature I built for my site.
+publish_date: 2017-12-31
+
+ExpandedTitle: 2017 In Review
+ImagePath: /post-images/top-nine-2017.png
+ImageCaption: My Instagram top nine of 2017
+---
 Today I finally finished reading [One Strategy: Organisation, Planning, and Decision Making](https://www.amazon.com/One-Strategy-Organization-Planning-Decision/dp/0470560452) by Steven Sinofsky and Marco Iansiti. I checked my email to see when I started reading it. Amazon tells me it was delivered on or around December 21st 2016. It's very rare for me to spend just over a year reading a book. I usually finish them quickly or abandon them, but I pushed through on this one.
 
 If you're an engineering or product manager this book is a must read. Format wise the book is a bunch of internal blog posts Steven Sinofsky wrote at Microsoft in the process of building Windows 7 interspersed with some of the most turgid, business-jargon filler content I've had the misfortune to cast my eyes over. In the end, I made it through the book only by skimming over all the non-blog content, which is conveniently in a different typeface.

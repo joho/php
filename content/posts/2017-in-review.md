@@ -1,3 +1,12 @@
+---
+title: 2017 In Review
+description: A quick braindump of the year primarily to test out the new blogging feature I built for my site.
+publish_date: 2017-12-31
+
+ExpandedTitle: 2017 In Review
+ImagePath: /post-images/top-nine-2017.png
+ImageCaption: My Instagram top nine of 2017
+---
 Seems like you can't swing a cat without hitting someone's year in review blog post. The world won't have been screaming out for me to add to the pile, but I wanted to pick something pretty quick and easy to smash out today. Primarily to put the new blogging part of my new site through its paces, but also to try and jump start the habit of writing more frequently.
 
 The redesign and relaunch of this site itself is something that happened in 2017. The source is all at [github.com/joho/php](https://github.com/joho/php), and the relevant PRs are [the redesign](https://github.com/joho/php/pull/6) and [adding blog posts](https://github.com/joho/php/pull/7). Ever since I saw the first screenshots from [Return of the Obra Dinn](https://dukope.itch.io/return-of-the-obra-dinn) I've been on a big retro dithering kick which naturally pulled my aesthetic all the way back to Encarta '93. If you want to have a bit of fun with the look I can highly recommend [the BitCam app](https://iconfactory.com/bc.html).
