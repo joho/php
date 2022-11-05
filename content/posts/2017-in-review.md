@@ -1,7 +1,7 @@
 ---
 title: 2017 In Review
 description: A quick braindump of the year primarily to test out the new blogging feature I built for my site.
-publish_date: 2017-12-31
+publishdate: 2017-12-31
 
 ExpandedTitle: 2017 In Review
 ImagePath: /post-images/top-nine-2017.png

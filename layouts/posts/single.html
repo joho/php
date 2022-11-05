@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{ .ExpandedTitle }}</title>
+    <title>{{ .Params.ExpandedTitle }}</title>
     <link href="/stylesheets/styles.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css">
 
@@ -14,22 +14,22 @@
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@johnbarton">
-    <meta name="twitter:title" content="{{ .ExpandedTitle }}">
+    <meta name="twitter:title" content="{{ .Params.ExpandedTitle }}">
     <meta name="twitter:description" content="{{ .Description }}">
     <meta name="twitter:creator" content="@johnbarton">
-    <meta name="twitter:image" content="{{ .AbsoluteImageURL }}">
+    <meta name="twitter:image" content="{{ .Params.ImagePath | absURL | safeHTMLAttr }}">
 
     <!-- Open Graph data -->
-    <meta property="og:title" content="{{ .ExpandedTitle }}" />
+    <meta property="og:title" content="{{ .Params.ExpandedTitle }}" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="{{ .AbsoluteURL }}" />
-    <meta property="og:image" content="{{ .AbsoluteImageURL }}" />
+    <meta property="og:url" content="{{ .Permalink | absURL }}" />
+    <meta property="og:image" content="{{ .Params.ImagePath | absURL }}" />
     <meta property="og:description" content="{{ .Description }}" /> 
     <meta property="og:site_name" content="johnbarton.co" />
-    {{if .PublishDateFormatted}}<meta property="article:published_time" content="{{ .PublishDateFormatted }}" />{{end}}
+    <meta property="article:published_time" content="{{ .PublishDate.Format "2006-01-02T15:04:05Z" }}" />
 
     <link rel="alternate" type="application/atom+xml" title="Posts" href="/feed.xml" />
-    <link rel="canonical" href="{{ .AbsoluteURL }}" />
+    <link rel="canonical" href="https://johnbarton.co/" />
   </head>
 
   <body>
@@ -60,21 +60,13 @@
 
     <div class="content">
       <div class="multimedia">
-        <img alt="John Barton" src="{{ .ImagePath }}">
-        <div class="button">{{ .ImageCaption }}</div>
+        <img alt="John Barton" src="{{ .Params.ImagePath }}">
+        <div class="button">{{ .Params.ImageCaption }}</div>
       </div>
 
       <div class="text">
-          <div class="photo-callout">{{ .ImageCaption }}</div>
+          <div class="photo-callout">{{ .Params.ImageCaption }}</div>
           {{ .Content }}
-          {{ if .ShowPostList }}
-          <h3>Recent Posts</h3>
-          <ul>
-            {{ range .RecentPosts }}
-            <li><a href="{{ .Path }}">{{ .ExpandedTitle }}</a></li>
-            {{ end }}
-          </ul>
-          {{ end }}
       </div> 
     </div>
 

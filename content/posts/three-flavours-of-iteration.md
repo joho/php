@@ -1,11 +1,11 @@
 ---
-title: 2017 In Review4
+title: Three flavours of iteration
 description: A quick braindump of the year primarily to test out the new blogging feature I built for my site.
-publish_date: 2017-12-31
+publishdate: 2018-01-11
 
-ExpandedTitle: 2017 In Review
-ImagePath: /post-images/top-nine-2017.png
-ImageCaption: My Instagram top nine of 2017
+ExpandedTitle: Three flavours of iteration
+ImagePath: /post-images/catlike-agility.jpg
+ImageCaption: This kind of agility?
 ---
 As far as I can tell there are roughly three flavours of working style in an "agile" environment that all get named "iterating".
 

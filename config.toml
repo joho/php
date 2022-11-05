@@ -1,3 +1,23 @@
 baseURL = 'https://johnbarton.co/'
 languageCode = 'en-au'
 title = 'John Barton'
+[params]
+  mainSections = ['posts']
+
+disableKinds = ["RSS"]
+
+[mediaTypes]
+  [mediaTypes."application/atom+xml"]
+    suffixes = ["xml"]
+
+[outputFormats.ATOM]
+MediaType             = "application/atom+xml"
+BaseName              = "feed"
+suffix                = "xml"
+IsHTML                = false
+IsPlainText           = false
+noUgly                = true
+Rel                   = "alternate"
+
+[outputs]
+  home = ["HTML","ATOM"]

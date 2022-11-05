@@ -1,11 +1,11 @@
 ---
-title: 2017 In Review1
-description: A quick braindump of the year primarily to test out the new blogging feature I built for my site.
-publish_date: 2017-12-31
+title: "Book Review: One Strategy"
+description: I spent a year reading this book and if you manage products or engineers you should too.
+publishdate: 2018-01-17
 
-ExpandedTitle: 2017 In Review
-ImagePath: /post-images/top-nine-2017.png
-ImageCaption: My Instagram top nine of 2017
+ExpandedTitle: "Book Review: One Strategy by Steven Sinofsky"
+ImagePath: /post-images/one-strategy.png
+ImageCaption: It was cheaper to buy a physical copy
 ---
 Today I finally finished reading [One Strategy: Organisation, Planning, and Decision Making](https://www.amazon.com/One-Strategy-Organization-Planning-Decision/dp/0470560452) by Steven Sinofsky and Marco Iansiti. I checked my email to see when I started reading it. Amazon tells me it was delivered on or around December 21st 2016. It's very rare for me to spend just over a year reading a book. I usually finish them quickly or abandon them, but I pushed through on this one.
 

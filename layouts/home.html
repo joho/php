@@ -28,6 +28,7 @@
     <meta property="og:site_name" content="johnbarton.co" />
 
     <link rel="alternate" type="application/atom+xml" title="Posts" href="/feed.xml" />
+    
     <link rel="canonical" href="https://johnbarton.co/" />
   </head>
 
@@ -67,8 +68,9 @@
           <div class="photo-callout">{{ .Params.ImageCaption }}</div>
           {{ .Content }}
           <h3>Recent Posts</h3>
+          {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
           <ul>
-            {{ range .Pages.ByPublishDate }}
+            {{ range $pages.ByPublishDate.Reverse }}
             <li><a href="{{ .Permalink }}">{{ .Params.ExpandedTitle }}</a></li>
             {{ end }}
           </ul>

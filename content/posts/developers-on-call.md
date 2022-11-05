@@ -1,11 +1,11 @@
 ---
-title: 2017 In Review2
-description: A quick braindump of the year primarily to test out the new blogging feature I built for my site.
-publish_date: 2017-12-31
+title: Developers On Call
+description: Developers not on call benefit from a status quo that is both morally questionable and ultimately unhelpful for software quality.
+publishdate: 2018-02-11
 
-ExpandedTitle: 2017 In Review
-ImagePath: /post-images/top-nine-2017.png
-ImageCaption: My Instagram top nine of 2017
+ExpandedTitle: Developers On Call
+ImagePath: /post-images/tools.png
+ImageCaption: My toolbox as allegory
 ---
 Over the past few days Charity Majors has been at the centre of a wide ranging twitter debate around whether developers should go on call. Her position, which I agree with 100%, is that developers should.
 
